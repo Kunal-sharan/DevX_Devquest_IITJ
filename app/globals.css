@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+.font-jakarta-sans{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+/* Add these styles for the heart button */
+.fill-heart {
+  fill: #ff0000; /* Use the desired fill color when clicked */
+  stroke: none; /* Remove the outline when clicked */
+}
+
+.outline-heart {
+  fill: none; /* Remove the fill when not clicked */
+  stroke: #ff0000; /* Use the desired outline color when not clicked */
+}

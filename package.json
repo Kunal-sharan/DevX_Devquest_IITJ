@@ -1,0 +1,41 @@
+{
+  "name": "devquest_hackathon",
+  "version": "0.1.0",
+  "proxy": "http://localhost:3000",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@nextui-org/react": "^2.2.9",
+    "bcrypt": "^5.1.1",
+    "chromedriver": "^120.0.1",
+    "file-loader": "^6.2.0",
+    "framer-motion": "^10.18.0",
+    "gsap": "^3.12.5",
+    "next": "14.1.0",
+    "next-optimized-images": "^2.6.2",
+    "next-themes": "^0.2.1",
+    "puppeteer": "^21.7.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "selenium-webdriver": "^4.16.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.48",
+    "autoprefixer": "^10.0.1",
+    "daisyui": "^4.6.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}
