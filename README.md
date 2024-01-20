@@ -19,12 +19,16 @@ Welcome to ShopWise, your one-stop tool for effortlessly comparing product price
 ## Installation
 
 1. **Clone the Repository:**
+
 ```git clone https://github.com/your-username/price-tracker.git```
 
 2. **Install Dependencies:**
+
 ```npm install```
 
 
 4. **Run the Application:**
+
 ```npm run dev```
+
 Visit http://localhost:3000 to access the ShopWise.
