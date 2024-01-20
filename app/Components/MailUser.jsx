@@ -3,7 +3,7 @@ import HeartButton from "./HeartButton";
 
 const NissanGTR = () => {
   return (
-    <div className="p-8 bg-blue-200 flex flex-col gap-5 w-full border-2 border-black rounded-2xl">
+    <div className="p-8 bg-blue-100 flex flex-col gap-5 w-full border-2 border-black rounded-2xl">
       <div>
         <div className="flex flex-row justify-between">
           <h2 className="font-bold mb-2 text-4xl">Nissan GT-R</h2>
