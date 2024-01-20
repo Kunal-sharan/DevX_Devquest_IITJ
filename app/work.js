@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ActSnapdeal from "../app/Data_Scrapping/Snapdeal";
 import ActEbay from "../app/Data_Scrapping/Ebay";
 import ActFlipkart from "../app/Data_Scrapping/Flipkart";
@@ -27,8 +27,7 @@ const dummyData = [
       "https://rukminim2.flixcart.com/image/832/832/jklgxow0/headphone/t/k/k/mi-ydjc01jy-original-imaf7x2ckna7hbym.jpeg?q=70&crop=false",
   },
   {
-    title:
-      "HP 15s-FR5012TU Intel Core i3 12th Gen (15.6 inch, 8GB)",
+    title: "HP 15s-FR5012TU Intel Core i3 12th Gen (15.6 inch, 8GB)",
     price: "38,990",
     links:
       "https://www.croma.com/hp-15s-fr5012tu-intel-core-i3-12th-gen-15-6-inch-8gb-512gb-windows-11-ms-office-2021-intel-uhd-full-hd-display-natural-silver-91w53pa-/p/302437",
@@ -36,8 +35,7 @@ const dummyData = [
       "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1701617050/Croma%20Assets/Computers%20Peripherals/Laptop/Images/302437_0_zobekt.png?tr=w-480",
   },
   {
-    title:
-      "Nike Air Jordan 1 Low Retro Men AJ1 Casual Lifestyle Shoes",
+    title: "Nike Air Jordan 1 Low Retro Men AJ1 Casual Lifestyle Shoes",
     price: "7999.99",
     links:
       "https://www.ebay.com/itm/364591927312?hash=item54e35f5010:g:Q~MAAOSwnghlXZfH&amdata=enc%3AAQAIAAAA4K15Bceoddp%2FDGjMSga8DXi%2FoSIEfAiUoCmpPXk1bCTFCoBfE6AdNJWgWePRe4NfGtlZW1IJp%2F4mRrGupkCJQHsB9Dvbdu73MLtQG3uwz7ix1iewe8ADrXkabt1kreC2dAS2xz2GqkdAaTIZ8k4OqWQRrEfz2DhBuw0ChUtTrIWTXANiLb1BUsqHd%2FsFqv5Dgcaiz%2FEnbhf%2FLSBtPvLf4cqnWwU4qtk91uUHrII63lwPjGJbAMYCoy5cCWVweH1frdXiMancso7h6mgvnY4zE69p%2Fu%2By4zTaw6oL1UWHQ4kZ%7Ctkp%3ABk9SR4iwx9WkYw",
@@ -45,11 +43,10 @@ const dummyData = [
   },
   // Add more dummy items as needed
 ];
-
 export default function Scraper() {
   const [loading, setLoading] = useState(false);
   // Initialize data state with dummy data
-  let [data, setData] = useState(dummyData);
+  const [data, setData] = useState(dummyData);
   const [searchTerm, setSearchTerm] = useState("");
 
   const fetchData = async () => {
@@ -70,15 +67,18 @@ export default function Scraper() {
       console.error("Error fetching data:", error.message);
     } finally {
       setLoading(false);
-      
     }
   };
+
+  // Use useEffect to update FetchData whenever data changes
+  useEffect(() => {
+    FetchData = data;
+  }, [data]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     Squery = searchTerm;
     fetchData();
-    FetchData = data;
   };
 
   return (
