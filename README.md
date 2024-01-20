@@ -20,12 +20,18 @@ Welcome to ShopWise, your one-stop tool for effortlessly comparing product price
 
 1. **Clone the Repository:**
 
-```git clone https://github.com/your-username/price-tracker.git```
+```git clone https://github.com/Shenron07/DevX_Devquest_IITJ```
 
 2. **Install Dependencies:**
 
 ```npm install```
 
+3. **Download and Configure Selenium WebDriver:**
+We have to install selenium-webdriver package and for doing this we simply have to run the following command.
+```npm install selenium-webdriver```
+
+We have to install a browser-specific webdriver and in this article series of web automation using selenium javascript, we will be automating and using chrome browser that’s why we will install chromedriver with the following command.
+```npm install chromedriver```
 
 4. **Run the Application:**
 
